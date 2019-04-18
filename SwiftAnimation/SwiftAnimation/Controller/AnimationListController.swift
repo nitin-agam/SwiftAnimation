@@ -12,7 +12,8 @@ class AnimationListController: UITableViewController {
 
     // MARK: - Variables
     private let kCellIdentifier = "AnimationCell"
-    private let animationListArray = ["Pulsing Animation"]
+    private let animationListArray = ["Pulsing Animation",
+                                      "Selection Menu"]
     
     // MARK: - View LifeCycle
     override func viewDidLoad() {
@@ -40,6 +41,11 @@ class AnimationListController: UITableViewController {
         switch indexPath.row {
         case 0:
             let controller = PulsingAnimationController()
+            controller.title = animationListArray[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
+            
+        case 1:
+            let controller = SelectionMenuController()
             controller.title = animationListArray[indexPath.row]
             navigationController?.pushViewController(controller, animated: true)
             

@@ -13,6 +13,8 @@
 		18A37260225A1F33005BD59D /* AnimationListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3725F225A1F33005BD59D /* AnimationListController.swift */; };
 		18A37262225A3EF6005BD59D /* PulsingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A37261225A3EF6005BD59D /* PulsingAnimationController.swift */; };
 		18A37265225A6CE7005BD59D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A37264225A6CE7005BD59D /* Extensions.swift */; };
+		18EAF0182267454C00B4922B /* SelectionMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF0172267454C00B4922B /* SelectionMenuController.swift */; };
+		18EAF01A226745DB00B4922B /* SelectionMenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF019226745DB00B4922B /* SelectionMenuLauncher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		18A3725F225A1F33005BD59D /* AnimationListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListController.swift; sourceTree = "<group>"; };
 		18A37261225A3EF6005BD59D /* PulsingAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingAnimationController.swift; sourceTree = "<group>"; };
 		18A37264225A6CE7005BD59D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		18EAF0172267454C00B4922B /* SelectionMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionMenuController.swift; sourceTree = "<group>"; };
+		18EAF019226745DB00B4922B /* SelectionMenuLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionMenuLauncher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		18A3725C225A1EA9005BD59D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18EAF0162267452F00B4922B /* SelectionMenu */,
 				18A3725F225A1F33005BD59D /* AnimationListController.swift */,
 				18A37261225A3EF6005BD59D /* PulsingAnimationController.swift */,
 			);
@@ -105,6 +110,15 @@
 				18A37264225A6CE7005BD59D /* Extensions.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		18EAF0162267452F00B4922B /* SelectionMenu */ = {
+			isa = PBXGroup;
+			children = (
+				18EAF0172267454C00B4922B /* SelectionMenuController.swift */,
+				18EAF019226745DB00B4922B /* SelectionMenuLauncher.swift */,
+			);
+			path = SelectionMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +195,8 @@
 				18A37260225A1F33005BD59D /* AnimationListController.swift in Sources */,
 				18A3724A225A1E7B005BD59D /* AppDelegate.swift in Sources */,
 				18A37265225A6CE7005BD59D /* Extensions.swift in Sources */,
+				18EAF0182267454C00B4922B /* SelectionMenuController.swift in Sources */,
+				18EAF01A226745DB00B4922B /* SelectionMenuLauncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

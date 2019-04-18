@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: listController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        
+        "t".forEach { (char) in
+            print(char)
+        }
+        
         return true
     }
 
