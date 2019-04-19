@@ -13,7 +13,9 @@ class AnimationListController: UITableViewController {
     // MARK: - Variables
     private let kCellIdentifier = "AnimationCell"
     private let animationListArray = ["Pulsing Animation",
-                                      "Selection Menu"]
+                                      "Selection Menu",
+                                      "Carousel Effect",
+                                      "Interactive Card"]
     
     // MARK: - View LifeCycle
     override func viewDidLoad() {
@@ -46,6 +48,18 @@ class AnimationListController: UITableViewController {
             
         case 1:
             let controller = SelectionMenuController()
+            controller.title = animationListArray[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
+            
+        case 2:
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .horizontal
+            let controller = CarouselEffectController(collectionViewLayout: layout)
+            controller.title = animationListArray[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
+            
+        case 3:
+            let controller = InteractiveAnimatorController()
             controller.title = animationListArray[indexPath.row]
             navigationController?.pushViewController(controller, animated: true)
             

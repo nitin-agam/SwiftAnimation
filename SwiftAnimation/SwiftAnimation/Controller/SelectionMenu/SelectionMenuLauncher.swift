@@ -26,6 +26,7 @@ class SelectionMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionVie
     var completion: ((Int) -> Void)?
     var selectedIndex = -1
     
+    
     override init() {
         super.init()
         self.collectionView.delegate = self
@@ -55,6 +56,7 @@ class SelectionMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionVie
             if height > window.frame.width {
                 height = window.frame.width
             }
+            
             collectionView.frame = CGRect(x: 0,
                                           y: window.frame.height,
                                           width: window.frame.width,
@@ -95,7 +97,9 @@ class SelectionMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionVie
             })
         }
     }
+
     
+    // MARK: - UICollectionView Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataArray.count
     }

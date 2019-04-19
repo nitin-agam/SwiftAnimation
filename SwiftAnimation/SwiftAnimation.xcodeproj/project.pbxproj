@@ -13,6 +13,11 @@
 		18A37260225A1F33005BD59D /* AnimationListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3725F225A1F33005BD59D /* AnimationListController.swift */; };
 		18A37262225A3EF6005BD59D /* PulsingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A37261225A3EF6005BD59D /* PulsingAnimationController.swift */; };
 		18A37265225A6CE7005BD59D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A37264225A6CE7005BD59D /* Extensions.swift */; };
+		18BA0BB322685A73008DB609 /* CarouselEffectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA0BB222685A73008DB609 /* CarouselEffectController.swift */; };
+		18BA0BB522685A99008DB609 /* CarouselCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA0BB422685A99008DB609 /* CarouselCollectionCell.swift */; };
+		18BA0BB722685B04008DB609 /* FitnessExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA0BB622685B04008DB609 /* FitnessExercise.swift */; };
+		18BDA17C2269B92800EDDB44 /* InteractiveAnimatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDA17B2269B92800EDDB44 /* InteractiveAnimatorController.swift */; };
+		18BDA1822269C78D00EDDB44 /* InteractiveCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDA1812269C78D00EDDB44 /* InteractiveCardController.swift */; };
 		18EAF0182267454C00B4922B /* SelectionMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF0172267454C00B4922B /* SelectionMenuController.swift */; };
 		18EAF01A226745DB00B4922B /* SelectionMenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF019226745DB00B4922B /* SelectionMenuLauncher.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +31,11 @@
 		18A3725F225A1F33005BD59D /* AnimationListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListController.swift; sourceTree = "<group>"; };
 		18A37261225A3EF6005BD59D /* PulsingAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingAnimationController.swift; sourceTree = "<group>"; };
 		18A37264225A6CE7005BD59D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		18BA0BB222685A73008DB609 /* CarouselEffectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselEffectController.swift; sourceTree = "<group>"; };
+		18BA0BB422685A99008DB609 /* CarouselCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionCell.swift; sourceTree = "<group>"; };
+		18BA0BB622685B04008DB609 /* FitnessExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessExercise.swift; sourceTree = "<group>"; };
+		18BDA17B2269B92800EDDB44 /* InteractiveAnimatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveAnimatorController.swift; sourceTree = "<group>"; };
+		18BDA1812269C78D00EDDB44 /* InteractiveCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveCardController.swift; sourceTree = "<group>"; };
 		18EAF0172267454C00B4922B /* SelectionMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionMenuController.swift; sourceTree = "<group>"; };
 		18EAF019226745DB00B4922B /* SelectionMenuLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionMenuLauncher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,9 +90,11 @@
 		18A3725C225A1EA9005BD59D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				18EAF0162267452F00B4922B /* SelectionMenu */,
 				18A3725F225A1F33005BD59D /* AnimationListController.swift */,
-				18A37261225A3EF6005BD59D /* PulsingAnimationController.swift */,
+				18BDA17A2269B8FD00EDDB44 /* InteractiveCard */,
+				18BA0BB122685A40008DB609 /* CarouselEffect */,
+				18EAF0162267452F00B4922B /* SelectionMenu */,
+				18BA0BB022685A2D008DB609 /* PulsingAnimation */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -110,6 +122,33 @@
 				18A37264225A6CE7005BD59D /* Extensions.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		18BA0BB022685A2D008DB609 /* PulsingAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				18A37261225A3EF6005BD59D /* PulsingAnimationController.swift */,
+			);
+			path = PulsingAnimation;
+			sourceTree = "<group>";
+		};
+		18BA0BB122685A40008DB609 /* CarouselEffect */ = {
+			isa = PBXGroup;
+			children = (
+				18BA0BB222685A73008DB609 /* CarouselEffectController.swift */,
+				18BA0BB422685A99008DB609 /* CarouselCollectionCell.swift */,
+				18BA0BB622685B04008DB609 /* FitnessExercise.swift */,
+			);
+			path = CarouselEffect;
+			sourceTree = "<group>";
+		};
+		18BDA17A2269B8FD00EDDB44 /* InteractiveCard */ = {
+			isa = PBXGroup;
+			children = (
+				18BDA17B2269B92800EDDB44 /* InteractiveAnimatorController.swift */,
+				18BDA1812269C78D00EDDB44 /* InteractiveCardController.swift */,
+			);
+			path = InteractiveCard;
 			sourceTree = "<group>";
 		};
 		18EAF0162267452F00B4922B /* SelectionMenu */ = {
@@ -191,10 +230,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BA0BB322685A73008DB609 /* CarouselEffectController.swift in Sources */,
+				18BA0BB522685A99008DB609 /* CarouselCollectionCell.swift in Sources */,
 				18A37262225A3EF6005BD59D /* PulsingAnimationController.swift in Sources */,
+				18BA0BB722685B04008DB609 /* FitnessExercise.swift in Sources */,
 				18A37260225A1F33005BD59D /* AnimationListController.swift in Sources */,
 				18A3724A225A1E7B005BD59D /* AppDelegate.swift in Sources */,
+				18BDA1822269C78D00EDDB44 /* InteractiveCardController.swift in Sources */,
 				18A37265225A6CE7005BD59D /* Extensions.swift in Sources */,
+				18BDA17C2269B92800EDDB44 /* InteractiveAnimatorController.swift in Sources */,
 				18EAF0182267454C00B4922B /* SelectionMenuController.swift in Sources */,
 				18EAF01A226745DB00B4922B /* SelectionMenuLauncher.swift in Sources */,
 			);
