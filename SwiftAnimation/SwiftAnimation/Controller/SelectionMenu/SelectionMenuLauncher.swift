@@ -6,17 +6,19 @@
 //  Copyright © 2019 Nitin A. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class SelectionMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
-    let blackView = UIView()
-    let cellIdentifier = "SelectionMenuCollectionCell"
-    let cellHeight: CGFloat = 50
+    private let blackView = UIView()
+    private let cellIdentifier = "SelectionMenuCollectionCell"
+    static private let kCellHeight: CGFloat = 50
     
     var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: SelectionMenuLauncher.kCellHeight)
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.backgroundColor = .white
         return collection
@@ -50,7 +52,7 @@ class SelectionMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionVie
             blackView.addGestureRecognizer(UITapGestureRecognizer(target: self,
                                                                   action: #selector(handleDismiss)))
             
-            var height = (CGFloat(dataArray.count) * cellHeight + 30)
+            var height = (CGFloat(dataArray.count) * SelectionMenuLauncher.kCellHeight + 30)
             
             // Just control the maximum height
             if height > window.frame.width {
@@ -111,18 +113,6 @@ class SelectionMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionVie
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.collectionView.frame.width, height: cellHeight)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor = UIColor(white: 0.9, alpha: 0.5)
@@ -138,8 +128,7 @@ class SelectionMenuCollectionCell: UICollectionViewCell {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight(rawValue: 0.4))
-        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(rawValue: 0.2))
         return label
     }()
     
@@ -154,9 +143,10 @@ class SelectionMenuCollectionCell: UICollectionViewCell {
     
     func setupViews() {
         addSubview(titleLabel)
-        NSLayoutConstraint.activate([
-            titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 15),
-            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -15)])
+        titleLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(15)
+            make.right.equalTo(-15)
+            make.centerY.equalToSuperview()
+        }
     }
 }

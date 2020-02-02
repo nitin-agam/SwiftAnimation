@@ -11,19 +11,27 @@ import UIKit
 class SelectionMenuController: UIViewController {
 
     // MARK: - Variables
-    let categoryNameLabel: UILabel = {
+    private let categoryNameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18)
-        label.textColor = .red
+        label.font = UIFont.systemFont(ofSize: 20)
         label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    lazy var menuLauncher: SelectionMenuLauncher = {
+    lazy private var menuLauncher: SelectionMenuLauncher = {
         let launcher = SelectionMenuLauncher()
         return launcher
     }()
+    
+    private let kCategories = ["Mobiles",
+                               "Computers",
+                               "Sports",
+                               "Cars",
+                               "Men's Fashion",
+                               "Women's Fashion",
+                               "Baby's Wear",
+                               "Electronics",
+                               "Home Decorations"]
     
     
     // MARK: - View LifeCycle
@@ -36,26 +44,33 @@ class SelectionMenuController: UIViewController {
     // MARK: - Private Methods
     private func initialSetup() {
         view.backgroundColor = .white
+        edgesForExtendedLayout = []
         
         let selectButton = UIButton(type: .system)
-        selectButton.translatesAutoresizingMaskIntoConstraints = false
         selectButton.setTitle("Select Category", for: .normal)
         selectButton.addTarget(self, action: #selector(handleCategorySelection), for: .touchUpInside)
-        view.addSubview(selectButton)
+        selectButton.backgroundColor = .kAppColor
+        selectButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        selectButton.setTitleColor(.white, for: .normal)
+        selectButton.layer.cornerRadius = 5
+        selectButton.layer.masksToBounds = true
+        view.addSubviews(selectButton, categoryNameLabel)
+        selectButton.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.height.equalTo(50)
+            make.width.equalTo(200)
+        }
         
-        selectButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
-        selectButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        view.addSubview(categoryNameLabel)
-        categoryNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        categoryNameLabel.topAnchor.constraint(equalTo: selectButton.bottomAnchor, constant: 30).isActive = true
+        categoryNameLabel.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(selectButton.snp.bottom).offset(20)
+        }
     }
     
     @objc private func handleCategorySelection() {
-        let categories = ["Mobiles", "Computers", "Sports", "Cars", "Men's Fashion", "Women's Fashion", "Baby's Wear", "Electronics", "Home Decorations"]
-        menuLauncher.launch(dataArray: categories) { (index) in
+        menuLauncher.launch(dataArray: kCategories) { (index) in
             if index > -1 {
-                self.categoryNameLabel.text = categories[index]
+                self.categoryNameLabel.text = self.kCategories[index]
             }
         }
     }

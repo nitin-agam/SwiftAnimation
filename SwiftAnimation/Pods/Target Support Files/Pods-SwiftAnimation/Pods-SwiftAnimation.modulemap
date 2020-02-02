@@ -1,0 +1,6 @@
+framework module Pods_SwiftAnimation {
+  umbrella header "Pods-SwiftAnimation-umbrella.h"
+
+  export *
+  module * { export * }
+}

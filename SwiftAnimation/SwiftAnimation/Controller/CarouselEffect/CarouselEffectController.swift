@@ -35,7 +35,6 @@ class CarouselEffectController: UICollectionViewController {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         collectionView.contentInset = UIEdgeInsets(top: marginY, left: marginX, bottom: marginY, right: marginY)
-        
         collectionView.backgroundColor = .clear
         collectionView!.register(CarouselCollectionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }

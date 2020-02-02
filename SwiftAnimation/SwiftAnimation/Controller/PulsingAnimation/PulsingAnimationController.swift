@@ -8,24 +8,26 @@
 
 import UIKit
 
+// https://i.picsum.photos/id/1/2000/3000.jpg
+// http://www.peoplelikeus.org/piccies/codpaste/codpaste-teachingpack.pdf
+
 class PulsingAnimationController: UIViewController {
 
     // MARK: - Variables
     private var circleShapeLayer: CAShapeLayer!
     private var pulsingLayer: CAShapeLayer!
-    private let fileUrlString = "http://www.peoplelikeus.org/piccies/codpaste/codpaste-teachingpack.pdf"
+    private let fileUrlString = "http://www.pdf995.com/samples/pdf.pdf"
     fileprivate var isDownloading = false
     
     private let percentageLabel: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.textColor = .white
         label.text = "Start"
         label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()
-    
+
     
     // MARK: - View LifeCycle
     override func viewDidLoad() {
@@ -36,15 +38,12 @@ class PulsingAnimationController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
-        
         // Adding notification to continue the pulsing animation when app will come in foreground from background.
         setupNotification()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.navigationBar.isHidden = false
         NotificationCenter.default.removeObserver(self)
     }
     
@@ -62,7 +61,7 @@ class PulsingAnimationController: UIViewController {
     }
     
     private func initialSetup() {
-        view.backgroundColor = UIColor.kBackground
+        view.backgroundColor = UIColor.kPulsingBackground
     }
     
     // Return a shapre layer in circle shape.
@@ -84,17 +83,16 @@ class PulsingAnimationController: UIViewController {
     
     private func setupCircles() {
         
-        
         // Setup pulsing animate layer
         pulsingLayer = createCircleShapeLayer(strokeColor: UIColor.clear,
-                                              fillColor: UIColor.kPulsingFill.withAlphaComponent(0.5))
+                                              fillColor: UIColor.kPulsingFill.withAlphaComponent(0.3))
         view.layer.addSublayer(pulsingLayer)
         pulsingLayerAnimate()
         
         
         // Setup track layer
         let trackLayer = createCircleShapeLayer(strokeColor: UIColor.kTrackStroke,
-                                                fillColor: UIColor.kBackground)
+                                                fillColor: UIColor.kPulsingBackground)
         view.layer.addSublayer(trackLayer)
         
         
@@ -114,8 +112,9 @@ class PulsingAnimationController: UIViewController {
     
     private func setupPercentageLabel() {
         view.addSubview(percentageLabel)
-        percentageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        percentageLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        percentageLabel.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
     }
     
     @objc private func handleTapGesture() {

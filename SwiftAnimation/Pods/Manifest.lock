@@ -1,0 +1,20 @@
+PODS:
+  - NAExtensions (1.0.4)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - NAExtensions (~> 1.0.4)
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - NAExtensions
+    - SnapKit
+
+SPEC CHECKSUMS:
+  NAExtensions: 64e52a12f9d6b12d6d215eb5373d93f90dccd320
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 7f7a3a52012e70a7ee6978729557c16fca7fede0
+
+COCOAPODS: 1.8.3

@@ -10,25 +10,23 @@ import UIKit
 
 class InteractiveAnimatorController: UIViewController {
     
-    enum CardState {
+    private enum CardState {
         case expanded
         case collapsed
     }
     
     // MARK: - Variables
-    var cardViewController: InteractiveCardController!
-    var blueView: UIVisualEffectView!
+    private var cardViewController: InteractiveCardController!
+    private var blueView = UIVisualEffectView()
+    private let cardHeight: CGFloat = UIScreen.main.bounds.height * 0.7
+    private let showCardHandleAreaHeight: CGFloat = 60
+    private var cardVisible = false
+    private var runningAnimations: [UIViewPropertyAnimator] = []
+    private var animationProgressWhenInterrupted: CGFloat = 0
     
-    let cardHeight: CGFloat = 600
-    let showCardHandleAreaHeight: CGFloat = 60
-    var cardVisible = false
-    var runningAnimations: [UIViewPropertyAnimator] = []
-    var animationProgressWhenInterrupted: CGFloat = 0
-    
-    var nextState: CardState {
+    private var nextState: CardState {
         return cardVisible ? .collapsed : .expanded
     }
-    
     
     
     // MARK: - View LifeCycle
@@ -42,38 +40,35 @@ class InteractiveAnimatorController: UIViewController {
     private func initialSetup() {
         view.backgroundColor = .white
         
-        let backgroundImageView = UIImageView(image: UIImage(named: "fitness_1"))
-        backgroundImageView.bounds = view.bounds
-        backgroundImageView.center = view.center
+        let backgroundImageView = UIImageView(image: UIImage(named: "fitness_2"))
         backgroundImageView.contentMode = .scaleAspectFill
         backgroundImageView.clipsToBounds = true
-        view.addSubview(backgroundImageView)
+        view.addSubviews(backgroundImageView, blueView)
         
-        blueView = UIVisualEffectView()
+        backgroundImageView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+        
         blueView.frame = view.frame
-        view.addSubview(blueView)
-        
         
         cardViewController = InteractiveCardController()
         addChild(cardViewController)
         view.addSubview(cardViewController.view)
         cardViewController.view.frame = CGRect(x: 0,
-                                               y: view.frame.height - showCardHandleAreaHeight,
+                                               y: self.view.frame.height - showCardHandleAreaHeight,
                                                width: view.frame.width,
                                                height: cardHeight)
         cardViewController.view.clipsToBounds = true
-        
         
         cardViewController.readButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleCardTapGesture(recognizer:))))
         cardViewController.readButton.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleCardPanGesture(recognizer:))))
     }
     
     @objc private func handleCardTapGesture(recognizer: UITapGestureRecognizer) {
-        switch  recognizer.state {
-        case .ended: self.animateTransitionIfNeeded(state: nextState, duration: 0.9)
-        default: break
+        switch recognizer.state {
+            case .ended: self.animateTransitionIfNeeded(state: nextState, duration: 0.9)
+            default: break
         }
-        
         self.cardViewController.readButton.setTitle(self.cardVisible ? "Read" : "Close", for: .normal)
     }
     
@@ -81,7 +76,6 @@ class InteractiveAnimatorController: UIViewController {
         switch recognizer.state {
         case .began:
             startInteractiveTransition(state: self.nextState, duration: 0.7)
-            
             
         case .changed:
             let translation = recognizer.translation(in: self.cardViewController.readButton)
@@ -140,23 +134,22 @@ class InteractiveAnimatorController: UIViewController {
             animateTransitionIfNeeded(state: state, duration: duration)
         }
         
-        for animator in runningAnimations {
+        runningAnimations.forEach { (animator) in
             animator.pauseAnimation()
             animationProgressWhenInterrupted = animator.fractionComplete
         }
     }
     
     private func updateInteractiveTransition(fractionCompleted: CGFloat) {
-        for animator in runningAnimations {
+        runningAnimations.forEach { (animator) in
             animator.fractionComplete = fractionCompleted + animationProgressWhenInterrupted
         }
     }
     
     private func continueInteractiveTransition() {
-        for animator in runningAnimations {
+        runningAnimations.forEach { (animator) in
             animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
         }
-        
         self.cardViewController.readButton.setTitle(self.cardVisible ? "Read" : "Close", for: .normal)
     }
 }

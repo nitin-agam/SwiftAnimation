@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,14 +12,18 @@
 		18A37254225A1E7D005BD59D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A37252225A1E7D005BD59D /* LaunchScreen.storyboard */; };
 		18A37260225A1F33005BD59D /* AnimationListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3725F225A1F33005BD59D /* AnimationListController.swift */; };
 		18A37262225A3EF6005BD59D /* PulsingAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A37261225A3EF6005BD59D /* PulsingAnimationController.swift */; };
-		18A37265225A6CE7005BD59D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A37264225A6CE7005BD59D /* Extensions.swift */; };
 		18BA0BB322685A73008DB609 /* CarouselEffectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA0BB222685A73008DB609 /* CarouselEffectController.swift */; };
 		18BA0BB522685A99008DB609 /* CarouselCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA0BB422685A99008DB609 /* CarouselCollectionCell.swift */; };
 		18BA0BB722685B04008DB609 /* FitnessExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA0BB622685B04008DB609 /* FitnessExercise.swift */; };
 		18BDA17C2269B92800EDDB44 /* InteractiveAnimatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDA17B2269B92800EDDB44 /* InteractiveAnimatorController.swift */; };
 		18BDA1822269C78D00EDDB44 /* InteractiveCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDA1812269C78D00EDDB44 /* InteractiveCardController.swift */; };
+		18D2395323E5367A005EDF27 /* TinderCardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2395223E5367A005EDF27 /* TinderCardsController.swift */; };
 		18EAF0182267454C00B4922B /* SelectionMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF0172267454C00B4922B /* SelectionMenuController.swift */; };
 		18EAF01A226745DB00B4922B /* SelectionMenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF019226745DB00B4922B /* SelectionMenuLauncher.swift */; };
+		18FFE09D23E5394C00494FA5 /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FFE09C23E5394C00494FA5 /* SwipeCardView.swift */; };
+		18FFE09F23E5397900494FA5 /* TinderUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FFE09E23E5397900494FA5 /* TinderUser.swift */; };
+		18FFE0A423E5471100494FA5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FFE0A323E5471100494FA5 /* UIColor+Extension.swift */; };
+		D7FB83476514F274645FE409 /* Pods_SwiftAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95F37827B369CD7BB342E56 /* Pods_SwiftAnimation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +34,20 @@
 		18A37255225A1E7D005BD59D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A3725F225A1F33005BD59D /* AnimationListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListController.swift; sourceTree = "<group>"; };
 		18A37261225A3EF6005BD59D /* PulsingAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingAnimationController.swift; sourceTree = "<group>"; };
-		18A37264225A6CE7005BD59D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		18BA0BB222685A73008DB609 /* CarouselEffectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselEffectController.swift; sourceTree = "<group>"; };
 		18BA0BB422685A99008DB609 /* CarouselCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionCell.swift; sourceTree = "<group>"; };
 		18BA0BB622685B04008DB609 /* FitnessExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessExercise.swift; sourceTree = "<group>"; };
 		18BDA17B2269B92800EDDB44 /* InteractiveAnimatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveAnimatorController.swift; sourceTree = "<group>"; };
 		18BDA1812269C78D00EDDB44 /* InteractiveCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveCardController.swift; sourceTree = "<group>"; };
+		18D2395223E5367A005EDF27 /* TinderCardsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderCardsController.swift; sourceTree = "<group>"; };
 		18EAF0172267454C00B4922B /* SelectionMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionMenuController.swift; sourceTree = "<group>"; };
 		18EAF019226745DB00B4922B /* SelectionMenuLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionMenuLauncher.swift; sourceTree = "<group>"; };
+		18FFE09C23E5394C00494FA5 /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
+		18FFE09E23E5397900494FA5 /* TinderUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUser.swift; sourceTree = "<group>"; };
+		18FFE0A323E5471100494FA5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		515DB0EDAF8033A9FFB43B62 /* Pods-SwiftAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAnimation.debug.xcconfig"; path = "Target Support Files/Pods-SwiftAnimation/Pods-SwiftAnimation.debug.xcconfig"; sourceTree = "<group>"; };
+		608260206FE55294E1E1D2D7 /* Pods-SwiftAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAnimation.release.xcconfig"; path = "Target Support Files/Pods-SwiftAnimation/Pods-SwiftAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		F95F37827B369CD7BB342E56 /* Pods_SwiftAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7FB83476514F274645FE409 /* Pods_SwiftAnimation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +67,8 @@
 			children = (
 				18A37248225A1E7B005BD59D /* SwiftAnimation */,
 				18A37247225A1E7B005BD59D /* Products */,
+				9F88B0CCE47037E7F3475990 /* Pods */,
+				A63B127932258CEAFD3C28B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,11 +83,11 @@
 		18A37248225A1E7B005BD59D /* SwiftAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				18A37263225A6CD2005BD59D /* Utility */,
 				18A3725B225A1E97005BD59D /* AppDelegate */,
-				18A3725C225A1EA9005BD59D /* Controller */,
-				18A3725E225A1ED2005BD59D /* Other */,
 				18A3725D225A1EC8005BD59D /* Storyboard */,
+				18A3725C225A1EA9005BD59D /* Controller */,
+				18FFE0A023E546F600494FA5 /* Extensions */,
+				18A3725E225A1ED2005BD59D /* Other */,
 			);
 			path = SwiftAnimation;
 			sourceTree = "<group>";
@@ -91,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				18A3725F225A1F33005BD59D /* AnimationListController.swift */,
+				18D2395123E53659005EDF27 /* TinderCard  */,
 				18BDA17A2269B8FD00EDDB44 /* InteractiveCard */,
 				18BA0BB122685A40008DB609 /* CarouselEffect */,
 				18EAF0162267452F00B4922B /* SelectionMenu */,
@@ -114,14 +128,6 @@
 				18A37255225A1E7D005BD59D /* Info.plist */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		18A37263225A6CD2005BD59D /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				18A37264225A6CE7005BD59D /* Extensions.swift */,
-			);
-			path = Utility;
 			sourceTree = "<group>";
 		};
 		18BA0BB022685A2D008DB609 /* PulsingAnimation */ = {
@@ -151,6 +157,16 @@
 			path = InteractiveCard;
 			sourceTree = "<group>";
 		};
+		18D2395123E53659005EDF27 /* TinderCard  */ = {
+			isa = PBXGroup;
+			children = (
+				18D2395223E5367A005EDF27 /* TinderCardsController.swift */,
+				18FFE09C23E5394C00494FA5 /* SwipeCardView.swift */,
+				18FFE09E23E5397900494FA5 /* TinderUser.swift */,
+			);
+			path = "TinderCard ";
+			sourceTree = "<group>";
+		};
 		18EAF0162267452F00B4922B /* SelectionMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +176,31 @@
 			path = SelectionMenu;
 			sourceTree = "<group>";
 		};
+		18FFE0A023E546F600494FA5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18FFE0A323E5471100494FA5 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9F88B0CCE47037E7F3475990 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				515DB0EDAF8033A9FFB43B62 /* Pods-SwiftAnimation.debug.xcconfig */,
+				608260206FE55294E1E1D2D7 /* Pods-SwiftAnimation.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A63B127932258CEAFD3C28B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F95F37827B369CD7BB342E56 /* Pods_SwiftAnimation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18A37258225A1E7D005BD59D /* Build configuration list for PBXNativeTarget "SwiftAnimation" */;
 			buildPhases = (
+				1CA28D9A5E6326591CA6C504 /* [CP] Check Pods Manifest.lock */,
 				18A37242225A1E7B005BD59D /* Sources */,
 				18A37243225A1E7B005BD59D /* Frameworks */,
 				18A37244225A1E7B005BD59D /* Resources */,
+				BAC903CE0B77D7C0A4BE2A99 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,6 +268,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CA28D9A5E6326591CA6C504 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftAnimation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAC903CE0B77D7C0A4BE2A99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftAnimation/Pods-SwiftAnimation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftAnimation/Pods-SwiftAnimation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftAnimation/Pods-SwiftAnimation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18A37242225A1E7B005BD59D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -233,12 +318,15 @@
 				18BA0BB322685A73008DB609 /* CarouselEffectController.swift in Sources */,
 				18BA0BB522685A99008DB609 /* CarouselCollectionCell.swift in Sources */,
 				18A37262225A3EF6005BD59D /* PulsingAnimationController.swift in Sources */,
+				18FFE09D23E5394C00494FA5 /* SwipeCardView.swift in Sources */,
 				18BA0BB722685B04008DB609 /* FitnessExercise.swift in Sources */,
 				18A37260225A1F33005BD59D /* AnimationListController.swift in Sources */,
+				18FFE0A423E5471100494FA5 /* UIColor+Extension.swift in Sources */,
 				18A3724A225A1E7B005BD59D /* AppDelegate.swift in Sources */,
 				18BDA1822269C78D00EDDB44 /* InteractiveCardController.swift in Sources */,
-				18A37265225A6CE7005BD59D /* Extensions.swift in Sources */,
+				18FFE09F23E5397900494FA5 /* TinderUser.swift in Sources */,
 				18BDA17C2269B92800EDDB44 /* InteractiveAnimatorController.swift in Sources */,
+				18D2395323E5367A005EDF27 /* TinderCardsController.swift in Sources */,
 				18EAF0182267454C00B4922B /* SelectionMenuController.swift in Sources */,
 				18EAF01A226745DB00B4922B /* SelectionMenuLauncher.swift in Sources */,
 			);
@@ -376,10 +464,12 @@
 		};
 		18A37259225A1E7D005BD59D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 515DB0EDAF8033A9FFB43B62 /* Pods-SwiftAnimation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N9CP8CEZY9;
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftAnimation/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -396,10 +486,12 @@
 		};
 		18A3725A225A1E7D005BD59D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 608260206FE55294E1E1D2D7 /* Pods-SwiftAnimation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N9CP8CEZY9;
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftAnimation/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
